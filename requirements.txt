@@ -1,0 +1,11 @@
+attrs==25.3.0
+Automat==24.8.1
+bcrypt==4.3.0
+constantly==23.10.4
+hyperlink==21.0.0
+idna==3.10
+incremental==24.7.2
+tomli==2.2.1
+Twisted==24.11.0
+typing_extensions==4.13.1
+zope.interface==7.2

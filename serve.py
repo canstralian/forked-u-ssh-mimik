@@ -21,6 +21,7 @@ import random
 import string
 import json
 import logging
+import argparse
 from datetime import datetime
 
 
@@ -58,10 +59,7 @@ class JSONLogObserver:
         self.logfile.write(json.dumps(log_entry) + "\n")
         self.logfile.flush()
 
-print("[+] Setting up log file..")
-logfile = open("ssh.json", "a")
-observer = JSONLogObserver(logfile)
-log.startLoggingWithObserver(observer)
+
 
 class ExampleAvatar(avatar.ConchUser):
     def __init__(self, username):
@@ -228,9 +226,19 @@ class ExampleFactory(factory.SSHFactory):
 
 
 if __name__ == "__main__":
-    print("[+] Starting listener on port 5022..")
-    reactor.listenTCP(5022, ExampleFactory())
-    log.msg("[+] SSH Server started on port 5022")
-    print("[+] SSH up & running on port 5022...")
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-p", "--port", help="Port to run SSH server on", required=True, type=int)
+    args = parser.parse_args()
+
+    print(f"[+] Starting listener on port {args.port}")
+    
+
+    reactor.listenTCP(args.port, ExampleFactory())
+    log.msg(f"[+] SSH Server started on port {args.port}")
+    print(f"[+] SSH up & running on port {args.port}...")
     reactor.run()
+    print("[+] Setting up log file..")
+    logfile = open("ssh.json", "a")
+    observer = JSONLogObserver(logfile)
+    log.startLoggingWithObserver(observer)
 
