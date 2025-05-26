@@ -25,3 +25,11 @@ Now we must generate the SSH keys that our mock SSH server will use:
 	- [ x ] Specifying the port SSH will run on
 	- [ x ] Specify the location log files will be saved to
 - [ ] Add example usage of utilizing Dockerfiles to deploy more realistic honeypots
+
+## Common Issues
+
+Script immediately exiting without starting server:
+
+![](https://i.ibb.co/qLTCPHjv/2025-05-26-08-59.png)
+
+**Fix: Ensure you've generated your SSH keys & they're placed in the same directory you're running the script from.**
