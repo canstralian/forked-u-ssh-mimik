@@ -61,6 +61,8 @@ class JSONLogObserver:
 
 
 
+
+
 class ExampleAvatar(avatar.ConchUser):
     def __init__(self, username):
         avatar.ConchUser.__init__(self)
@@ -224,21 +226,21 @@ class ExampleFactory(factory.SSHFactory):
     def getPrivateKeys(self):
         return {b"ssh-rsa": keys.Key.fromFile(SERVER_RSA_PRIVATE)}
 
-
+# Usage: sudo python3 serve.py -p 22 -l /splunk/log/folder
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("-p", "--port", help="Port to run SSH server on", required=True, type=int)
+    parser.add_argument("-l", "--log", help="Directory to store logs. Log file name will be appended on", required=True)
     args = parser.parse_args()
 
-    print(f"[+] Starting listener on port {args.port}")
-    
+    print(f"[+] SSH server will run on port {args.port}")
 
-    reactor.listenTCP(args.port, ExampleFactory())
-    log.msg(f"[+] SSH Server started on port {args.port}")
-    print(f"[+] SSH up & running on port {args.port}...")
-    reactor.run()
-    print("[+] Setting up log file..")
-    logfile = open("ssh.json", "a")
+    logfile = open(args.log + "/ssh.json", "a")
     observer = JSONLogObserver(logfile)
     log.startLoggingWithObserver(observer)
+
+
+    reactor.listenTCP(args.port, ExampleFactory())
+    reactor.run()
+    
 
