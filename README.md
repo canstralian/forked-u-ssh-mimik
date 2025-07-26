@@ -16,6 +16,8 @@ Now we must generate the SSH keys that our mock SSH server will use:
 
 `python3 serve.py -p 22 -l /splunk/log/folder` to serve the SSH server on port 22 & place log file within specified directory
 
+Once the server is up & running the default creds are: `user:password`
+
 ## Todo
 
 - [ ] Update readme to include usage information
@@ -25,6 +27,9 @@ Now we must generate the SSH keys that our mock SSH server will use:
 	- [ x ] Specifying the port SSH will run on
 	- [ x ] Specify the location log files will be saved to
 - [ ] Add example usage of utilizing Dockerfiles to deploy more realistic honeypots
+- [ ] Add automated python script that'll auto attack SSH honeypots on specified subnet to simulate attacker. CTF-style questions will then be asked based on these commands ran.
+- [ ] Possible web interface for viewing active SSH sessions & logs?
+
 
 ## Common Issues
 
