@@ -1,14 +1,49 @@
 # forked-u-ssh-mimik
 
-⚠️ **Disclaimer**: This repository is a fork of [redveil-security/ssh-mimik](https://github.com/redveil-security/ssh-mimik).  
-It exists for **security auditing, controlled research, and educational purposes only**.  
+![GitHub Repo stars](https://img.shields.io/github/stars/canstralian/forked-u-ssh-mimik?style=social)
+![GitHub forks](https://img.shields.io/github/forks/canstralian/forked-u-ssh-mimik?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/canstralian/forked-u-ssh-mimik?style=social)
+![GitHub license](https://img.shields.io/github/license/canstralian/forked-u-ssh-mimik)
+![GitHub last commit](https://img.shields.io/github/last-commit/canstralian/forked-u-ssh-mimik)
+![GitHub issues](https://img.shields.io/github/issues/canstralian/forked-u-ssh-mimik)
+![GitHub closed issues](https://img.shields.io/github/issues-closed/canstralian/forked-u-ssh-mimik)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/canstralian/forked-u-ssh-mimik)
+![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/canstralian/forked-u-ssh-mimik)
 
-This fork applies:
-- Hardened deployment practices (isolated containers/VMs, no host mounts).
-- Static and dynamic analysis tools (Bandit, Safety, etc.).
-- Clear documentation of risks and safeguards.  
+![Python versions](https://img.shields.io/pypi/pyversions/forked-u-ssh-mimik)
+![PyPI version](https://img.shields.io/pypi/v/forked-u-ssh-mimik?label=pypi%20release)
+![Build Status](https://github.com/canstralian/forked-u-ssh-mimik/actions/workflows/main.yml/badge.svg)
+![CodeQL Analysis](https://github.com/canstralian/forked-u-ssh-mimik/actions/workflows/codeql-analysis.yml/badge.svg)
+![Bandit Scan](https://img.shields.io/badge/security-bandit-yellow)
+![Dependencies Safe](https://img.shields.io/badge/dependencies-safe-brightgreen)
 
-Not intended for offensive use. Use responsibly, in isolated lab environments.
+![Repo size](https://img.shields.io/github/repo-size/canstralian/forked-u-ssh-mimik)
+![Contributors](https://img.shields.io/github/contributors/canstralian/forked-u-ssh-mimik)
+![Top language](https://img.shields.io/github/languages/top/canstralian/forked-u-ssh-mimik)
+
+---
+
+## ⚠️ Disclaimer
+
+This repository is a **fork of [redveil-security/ssh-mimik](https://github.com/redveil-security/ssh-mimik)**. It is intended for:
+
+- **Security auditing**  
+- **Static and dynamic analysis**  
+- **Educational use in isolated lab environments**  
+
+**Not intended for offensive use.**  
+
+---
+
+## 🔒 Purpose of this Fork
+
+This fork focuses on **safe research and responsible testing**:
+
+- Hardened deployment practices (isolated containers/VMs, no host mounts).  
+- Pre-launch dependency and security scans (`Bandit`, `Safety`).  
+- Documentation of security risks and safe usage guidelines.  
+
+All testing should be done in **isolated environments**; do not run on production systems or networks.
 
 # ssh-mimik
 
