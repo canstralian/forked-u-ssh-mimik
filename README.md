@@ -1,3 +1,15 @@
+# forked-u-ssh-mimik
+
+⚠️ **Disclaimer**: This repository is a fork of [redveil-security/ssh-mimik](https://github.com/redveil-security/ssh-mimik).  
+It exists for **security auditing, controlled research, and educational purposes only**.  
+
+This fork applies:
+- Hardened deployment practices (isolated containers/VMs, no host mounts).
+- Static and dynamic analysis tools (Bandit, Safety, etc.).
+- Clear documentation of risks and safeguards.  
+
+Not intended for offensive use. Use responsibly, in isolated lab environments.
+
 # ssh-mimik
 
 SSH honeypot utilizing ephemeral Docker containers.
